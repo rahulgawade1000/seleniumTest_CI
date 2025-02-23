@@ -15,8 +15,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Set execute permission for Selenium Manager
-      run: chmod +x ./SeleniumTest/bin/Debug/net8.0/selenium-manager/linux/selenium-manager
+    - name: List Debug Folder
+      run: ls -laR ./SeleniumTest/bin/Debug/net8.0/
+    - name: Find selenium-manager
+      run: find . -name selenium-manager
     - uses: actions/checkout@v4
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
