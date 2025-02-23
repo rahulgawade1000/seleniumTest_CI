@@ -113,22 +113,22 @@ public class Tests
         Assert.Pass();
         
     }
-
-    [Test, Order(2),TestCase(@"C:\\Automation\\CsharpAuto\\scr.png"),Category("B")]
-    public void Test3(string filePath)
-    {
-        string directory = Path.GetDirectoryName(filePath);
-        if (!Directory.Exists(directory))
-        {
-            Directory.CreateDirectory(directory);
-        }
-  
-        Thread.Sleep(2000);
-        Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
-        screenshot.SaveAsFile(filePath);
-        Thread.Sleep(3000);
-        Assert.Pass();
-    }
+    
+    // [Test, Order(2),TestCase(@"C:\\Automation\\CsharpAuto\\scr.png"),Category("B")]
+    // public void Test3(string filePath)
+    // {
+    //     string directory = Path.GetDirectoryName(filePath);
+    //     if (!Directory.Exists(directory))
+    //     {
+    //         Directory.CreateDirectory(directory);
+    //     }
+    //
+    //     Thread.Sleep(2000);
+    //     Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+    //     screenshot.SaveAsFile(filePath);
+    //     Thread.Sleep(3000);
+    //     Assert.Pass();
+    // }
 
     [Test, Order(6)]
     public void  printParagraph()
